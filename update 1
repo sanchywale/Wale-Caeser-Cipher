@@ -1,0 +1,19 @@
+alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+walecipher = []
+print ("wales Caser Cipher project")
+ciphershift=int(input("Enter shift Value between 1 and 25: "))
+userMessage =input("Enter message you want to encrpt: ")
+userMessage = userMessage.lower()
+encrypt = []
+while ciphershift not in range (1,26):
+    print ("Please, enter a Valid selection")
+    ciphershift=int(input("Enter shift Value between 1 and 25: "))
+for shift in alphabet [0:ciphershift]:
+    walecipher=alphabet[ciphershift:]+alphabet[0:ciphershift]
+for letter in userMessage:
+    if letter in alphabet:
+        i=alphabet.index(letter)
+        encrypt.append(walecipher[i])
+    else:
+        encrypt.append(letter)
+print(''.join(encrypt))
